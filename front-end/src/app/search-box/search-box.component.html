@@ -1,0 +1,7 @@
+<div>
+  <input #searchBox id="search-box" class="text-search" (input)="autocomplete(searchBox.value)" placeholder="Enter name" />
+    <div class="autocomplete-list" *ngIf="showAutocomplete">{{ autocompleteList }}</div>
+  
+ 
+  <input type="button" value="Search" (click)="search(searchBox.value)" />
+</div>
