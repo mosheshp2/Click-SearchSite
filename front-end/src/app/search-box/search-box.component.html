@@ -1,7 +1,13 @@
-<div>
-  <input #searchBox id="search-box" class="text-search" (input)="autocomplete(searchBox.value)" placeholder="Enter name" />
-    <div class="autocomplete-list" *ngIf="showAutocomplete">{{ autocompleteList }}</div>
+
+<div class="search-cont">
+<form [formGroup]='searchForm'>
+  <input formControlName="searchTerm" class="text-search" placeholder="Enter name" />
+   
+  <div class="autocomplete-list" *ngIf="showAutocomplete" (clickOutside)="toggleAutocomplete(false);">
+    <span *ngIf="autoIsLoading" class="lds-dual-ring"> </span>
+    <p *ngFor="let word of (autocompleteList)" (click)="search(word.name)">{{word.name}}</p>
+  </div>
   
- 
-  <input type="button" value="Search" (click)="search(searchBox.value)" />
+  <input type="button" value="Search" (click)="search()" />
+</form>
 </div>

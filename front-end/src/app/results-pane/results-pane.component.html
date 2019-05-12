@@ -1,3 +1,27 @@
-<p>
-  results-pane works!
-</p>
+<div class="container flex max-width-700">
+  <div class="resultList grow--3">
+    <div *ngFor="let result of searchResults" (click)="select(result)" class="result-item">
+        <div class="grow--1 flex-center">
+          <img src="{{ result.avatar }}" alt="{{ result.name }}" />
+        </div>
+        <div class="item-details-text grow--3">
+            <p class="blue upper bold">{{ result.name }}</p>
+            <span>{{ result.email }}</span>
+            <span> text ddd</span>
+            <span> text ddd</span>
+        </div>
+    </div>
+  </div>
+
+  <div class="details grow--1" *ngIf="selectedItem != null">
+    <div class="grow--1 flex-center">
+        <img src="{{ selectedItem.avatar }}" alt="{{ selectedItem.name }}" />
+    </div>
+    <div class="item-details-text grow--3">
+        <p class="blue upper bold">{{ selectedItem.name }}</p>
+        <span>{{ selectedItem.email }}</span>
+        <span> more detaild ilkenlk elkwelkn dpjklkmwdq qwdlklkjqwd qwdkjqwdlkjwd qwdlkjqwdlkjqwd qwdlkjqwdlkj ddd</span>
+        <a href="#/details"> more details...>>></a>
+    </div>
+  </div>
+</div>

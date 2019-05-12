@@ -1,4 +1,32 @@
 input { padding:10px; margin: 10px; width:100px;}
 input.text-search { width:350px;}
+.search-cont { position: relative;}
+.autocomplete-list {border: 1px solid gray; width:200px; position: absolute; top:40px; left:15px; padding: 5px; background: #fff;}
+.autocomplete-list p { padding: 5px; margin: 1px; }
+.autocomplete-list p:hover{ background: #aaf5ff; cursor: pointer; }
 
-.autocomplete-list {border: 1px solid gray; width:200px; display: absolute; top:-10px;}
+.lds-dual-ring {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+  }
+  .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 1px;
+    border-radius: 50%;
+    border: 5px solid #999;
+    border-color: #999 transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
