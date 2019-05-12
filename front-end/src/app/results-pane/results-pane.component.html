@@ -1,6 +1,6 @@
 <div class="container flex max-width-700">
   <div class="resultList grow--3">
-    <div *ngFor="let result of searchResults" (click)="select(result)" class="result-item">
+    <div *ngFor="let result of searchResults" (click)="select(result)" class="result-item card">
         <div class="grow--1 flex-center">
           <img src="{{ result.avatar }}" alt="{{ result.name }}" />
         </div>
@@ -13,11 +13,11 @@
     </div>
   </div>
 
-  <div class="details grow--1" *ngIf="selectedItem != null">
-    <div class="grow--1 flex-center">
+  <div class="details card grow--1" *ngIf="selectedItem != null">
+    <div class="grow--1 margin--5">
         <img src="{{ selectedItem.avatar }}" alt="{{ selectedItem.name }}" />
     </div>
-    <div class="item-details-text grow--3">
+    <div class="item-details-text grow--3 margin--5">
         <p class="blue upper bold">{{ selectedItem.name }}</p>
         <span>{{ selectedItem.email }}</span>
         <span> more detaild ilkenlk elkwelkn dpjklkmwdq qwdlklkjqwd qwdkjqwdlkjwd qwdlkjqwdlkjqwd qwdlkjqwdlkj ddd</span>
